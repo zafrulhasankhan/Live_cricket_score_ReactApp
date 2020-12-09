@@ -1,7 +1,24 @@
 .App {
   text-align: center;
+  
 }
-
+.Apptitle{
+  text-align: center;
+  font-style: italic;
+  font-size: 24px;
+  animation: title; 
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes title{
+  0%{
+    color: red;
+  }
+  25% {color: blueviolet;}
+  50% {color: black;}
+  100% {color: blue}
+  100% {color: violet;}
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
