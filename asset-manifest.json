@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Live_cricket_score_ReactApp/static/css/main.aacb554a.chunk.css",
+    "main.js": "/Live_cricket_score_ReactApp/static/js/main.554a9040.chunk.js",
+    "main.js.map": "/Live_cricket_score_ReactApp/static/js/main.554a9040.chunk.js.map",
+    "runtime-main.js": "/Live_cricket_score_ReactApp/static/js/runtime-main.eac6df5f.js",
+    "runtime-main.js.map": "/Live_cricket_score_ReactApp/static/js/runtime-main.eac6df5f.js.map",
+    "static/css/2.91254bc6.chunk.css": "/Live_cricket_score_ReactApp/static/css/2.91254bc6.chunk.css",
+    "static/js/2.b5df3278.chunk.js": "/Live_cricket_score_ReactApp/static/js/2.b5df3278.chunk.js",
+    "static/js/2.b5df3278.chunk.js.map": "/Live_cricket_score_ReactApp/static/js/2.b5df3278.chunk.js.map",
+    "static/js/3.98ca7884.chunk.js": "/Live_cricket_score_ReactApp/static/js/3.98ca7884.chunk.js",
+    "static/js/3.98ca7884.chunk.js.map": "/Live_cricket_score_ReactApp/static/js/3.98ca7884.chunk.js.map",
+    "index.html": "/Live_cricket_score_ReactApp/index.html",
+    "static/css/2.91254bc6.chunk.css.map": "/Live_cricket_score_ReactApp/static/css/2.91254bc6.chunk.css.map",
+    "static/css/main.aacb554a.chunk.css.map": "/Live_cricket_score_ReactApp/static/css/main.aacb554a.chunk.css.map",
+    "static/js/2.b5df3278.chunk.js.LICENSE.txt": "/Live_cricket_score_ReactApp/static/js/2.b5df3278.chunk.js.LICENSE.txt",
+    "static/media/images.72221129.jpeg": "/Live_cricket_score_ReactApp/static/media/images.72221129.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eac6df5f.js",
+    "static/css/2.91254bc6.chunk.css",
+    "static/js/2.b5df3278.chunk.js",
+    "static/css/main.aacb554a.chunk.css",
+    "static/js/main.554a9040.chunk.js"
+  ]
+}
