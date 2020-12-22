@@ -1,16 +1,20 @@
 import React,{useState,useEffect} from 'react';
-import './Style.css';
+//import './Style.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import images from './image/images.jpeg';
 import {Link} from 'react-router-dom';
+import '../App.css';
 import {
     Button,
     Card,
     CardActions,
     CardContent,
     Grid,
-    Typography
+    Typography,
+    CardActionArea,
+    CardMedia
   } from "@material-ui/core";
+
 
 
 function MatchCard() {
@@ -29,8 +33,8 @@ function MatchCard() {
    //const response = await fetch("https://cricapi.com/api/fantasySummary/?unique_id=1216524&apikey=el3BqjZxc5MmxjbNyIYdPfnO9aT2");
    const matchlist = await response.json();
    setmatches(matchlist.matches);
-   console.log({allmatches});
-   //console.log(matchlist)
+   //console.log({allmatches});
+   console.log(matchlist)
     }
   
 
@@ -38,37 +42,37 @@ function MatchCard() {
 
 
     return (
-        <div className="App" container justify="center">
-       
-           <Link to ={'/search'}>
+      
+        <div className="App" style={{textAlign:'center',justifyContent:'center'}}>
+          <Link to ={'/search'}>
              <button className="btn btn-outline-success btn-fw" >
               Click for Search Any Player 
             </button>
-            </Link>
-    
-        {allmatches && allmatches.map((allmatch) =>(
+          </Link>
+         
+         {allmatches && allmatches.map((allmatch) =>(
         
-
-        <Card  key={allmatch.unique_id} style={{
-          background: allmatch.matchStarted ? "rgb(86, 170, 86)" : "rgb(209, 209, 92)",
-          marginTop: 15,
-        }}>
+          <Card  key={allmatch.unique_id} style={{
+                 background: allmatch.matchStarted ? " black" : "#cccccc",
+                 marginTop: 15,
+                 marginLeft:'10%',
+                 justifyContent:'center',
+                 display:"flex",
+                 flexDirection:'column',
+                 width:'80%',
+                 height:'80%',
+                 color: allmatch.matchStarted ? "white":"black",
+                 boxShadow: '2px 18px 20px 20px #666666'
+              }} >
         
         <CardContent>
-          
           <Grid container justify="center" alignItems="center" spacing={4}> 
             <Grid item>
-              
-            <Typography variant="h5">{allmatch["team-1"]}</Typography>
-            
+                <Typography variant="h5">{allmatch["team-1"]}</Typography>
             </Grid>
           
             <Grid item>
-              <img
-                style={{ width: 85 }}
-                src={images}
-                alt=""
-              />
+              <h2 className="versus">VS</h2>
             </Grid>
             <Grid item>
               <Typography variant="h5">{allmatch["team-2"]}</Typography>
@@ -77,14 +81,14 @@ function MatchCard() {
         </CardContent>
 
         <CardActions>
-        <Grid container justify="center">
-      <h5>Toss Winner team : {allmatch.toss_winner_team}</h5>
+           <Grid container justify="center">
+               <h5>Toss Winner team : {allmatch.toss_winner_team}</h5>
           </Grid>
         </CardActions>
         <CardActions>
-        <Grid container justify="center">
-      <h5 style={{color: "yellow"}}>Match Winner team : {allmatch.winner_team}</h5>
-          </Grid>
+           <Grid container justify="center">
+              <h5>Match Winner team : {allmatch.winner_team}</h5>
+           </Grid>
         </CardActions>
        
         <CardActions>
@@ -110,8 +114,9 @@ function MatchCard() {
         </CardActions>
     </Card>
 ))}
-
-        </div>
+      
+  </div>  
+      
     );
 }
 

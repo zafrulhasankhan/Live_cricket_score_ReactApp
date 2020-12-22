@@ -36,7 +36,26 @@ function PlayerInfo({match}) {
               Click for Search Any Player 
             </button>
             </Link><br></br><br></br>
-              <div className="container">
+            <Card  style={{
+         // background: allmatch.matchStarted ? " black" : "#cccccc",
+          background:"#cccccc",
+          marginTop: 15,
+          marginLeft:'10%',
+          justifyContent:'center',
+          display:"flex",
+          flexDirection:'column',
+          width:'80%',
+          height:'80%',
+          boxShadow: '2px 18px 20px 20px #666666'
+         // color:"white"
+          //color: allmatch.matchStarted ? "white":"black"
+          
+        }} >
+        
+        <CardContent>
+          
+          <Grid container justify="center" alignItems="center" spacing={4}>
+              <div className="container"><br></br>
                 <img src={playerdata.imageURL} style={{height:230,width:200}}></img>
                 <h5 className="playerName">{playerdata.name}</h5>
                 <p>{playerdata.profile}</p><br></br>
@@ -274,6 +293,9 @@ function PlayerInfo({match}) {
            
                
          </div>
+         </Grid>
+         </CardContent>
+         </Card>
             
         </div>
     );

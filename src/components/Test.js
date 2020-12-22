@@ -19,9 +19,7 @@ import {
 
 const Test = ( {match} ) =>{
 
-  var name ="nasim";
-     //console.log('match',match);
-     //console.log(match.params.id);
+  
         const [scores,setscores] = useState([]);
         const [squad,setsquad]  = useState([]);
         const [Team2,setTeam2] = useState([]);
@@ -86,76 +84,61 @@ const Test = ( {match} ) =>{
             </Link><br></br><br></br>
 
           
-       <Card style={{background: "rgba(216, 208, 208, 0.781)",textAlign:"center"}}>
+       <Card style={{
+        background: "rgba(216, 208, 208, 0.781)",
+        textAlign:"center",
+        marginTop: 15,
+          marginLeft:'10%',
+          justifyContent:'center',
+          display:"flex",
+          flexDirection:'column',
+          width:'80%',
+          height:'80%',
+        boxShadow: '2px 18px 20px 20px #666666'
+       
+       }}>
         <CardContent>
+            <Grid container justify="center" alignItems="center" spacing={4}> 
+              <Grid item>
+               <Typography variant="h5">{scores["team-1"]}</Typography>
+               </Grid>
           
-          <Grid container justify="center" alignItems="center" spacing={4}> 
-            <Grid item>
-              
-            <Typography variant="h5">{scores["team-1"]}</Typography>
-            
-            </Grid>
-          
-            <Grid item>
+             <Grid item>
               <img
                 style={{ width: 85 }}
                 src={images}
                 alt=""
               />
-            </Grid>
-            <Grid item>
-            <Typography variant="h5">{scores["team-2"]}</Typography>
-            </Grid>
-          </Grid>
+             </Grid>
+             <Grid item>
+                <Typography variant="h5">{scores["team-2"]}</Typography>
+             </Grid>
+           </Grid>
         </CardContent>
 
         <CardActions>
-        <Grid container justify="center">
-      <h5>Score : {scores.description}</h5>
+           <Grid container justify="center">
+              <h5>Score : {scores.description}</h5>
           </Grid>
         </CardActions>
         <CardActions>
-        <Grid container justify="center">
-            <h5 style={{color: "black"}}>{scores.stat}</h5>
+           <Grid container justify="center">
+              <h5 style={{color: "black"}}>{scores.stat}</h5>
           </Grid>
         </CardActions>
        <CardActions>
-       <Grid container justify="center">
-         <p style={{color:"red"}}><b>-------------------------***************--------------------------</b></p>
-         </Grid>
-       </CardActions>
-       {/*
-       <CardActions>
-          <Grid container justify="center">
-           
-            <button
-              className="btn btn-primary"
-              variant="outlined"
-              color="secondary"
-            >
-              Show Detail 
-            </button>
-           
-            <button
-            className="btn btn-outline-success btn-fw"
-              //style={{ marginLeft: 5 }}
-              //variant="outlined"
-              //color="primary"
-              
-            >
-              Starting time 
-            </button>
-          </Grid>
-            </CardActions>
-       */}
-            <CardActions>
            <Grid container justify="center">
-           <h2><b><u>Squad</u></b></h2>
-          </Grid>
+               <p style={{color:"red"}}><b>-------------------------***************--------------------------</b></p>
+           </Grid>
+       </CardActions>
+          <CardActions>
+             <Grid container justify="center">
+                 <h2><b><u>Squad</u></b></h2>
+             </Grid>
           </CardActions>
           
-          <CardActions>
-           <Grid container justify="center">
+        <CardActions>
+          <Grid container justify="center">
            <table className="batting1"> 
             <thead>
               <tr>
@@ -170,52 +153,42 @@ const Test = ( {match} ) =>{
                 let team1= [];
                  for(let i=0; i< squad?.length;i++){
                     team1.push( 
-                    
                     <tr>
-                    
-                    <td className="squadTeam1"><Link to={`/MatchCard/${match.params.id}/${squad[i]?.pid}`}>{squad[i]?.name}</Link></td>
-                    
-                    
-                    <td className="squadTeam2"><Link to={`/MatchCard/${match.params.id}/${Team2[i]?.pid}`}>{Team2[i]?.name}</Link></td>
-                   
-                     </tr> 
-                      
-                      )
-                    
-                 }
+                       <td className="squadTeam1"><Link to={`/MatchCard/${match.params.id}/${squad[i]?.pid}`}>{squad[i]?.name}</Link></td>
+                        <td className="squadTeam2"><Link to={`/MatchCard/${match.params.id}/${Team2[i]?.pid}`}>{Team2[i]?.name}</Link></td>
+                   </tr> 
+                    )
+                   }
                  return team1;
             })()}
                
-               
-             
-
-            </tbody>
+               </tbody>
            </table>
           </Grid>
           </CardActions>
           
           <CardActions>
-          <Grid container justify="center">
-          <h2><b><u>Batting Statistics</u></b></h2><br></br>
-          </Grid>
+             <Grid container justify="center">
+                <h2><b><u>Batting Statistics</u></b></h2><br></br>
+             </Grid>
           </CardActions>
-          <p className="batTeam1">{batTeam1}</p>
+              <p className="batTeam1">{batTeam1}</p>
           <CardActions>
-          <Grid container justify="center">
+              <Grid container justify="center">
           
-          <table className="batting1">
-            <thead>
-              <tr>
-                <th>Batsman Name</th>
-                <th>Run</th>
-                <th>Ball</th>
-                <th>6s</th>
-                <th>4s</th>
-                <th>Strike rate</th>
-                <th>Dismissal Info.</th>
-              </tr>
-            </thead>
-            <tbody>
+                  <table className="batting1">
+                     <thead>
+                          <tr>
+                             <th>Batsman Name</th>
+                              <th>Run</th>
+                              <th>Ball</th>
+                              <th>6s</th>
+                              <th>4s</th>
+                              <th>Strike rate</th>
+                              <th>Dismissal Info.</th>
+                              </tr>
+                      </thead>
+                      <tbody>
              
               
                {(() => {
@@ -352,7 +325,7 @@ const Test = ( {match} ) =>{
           <p className="batTeam2">{bowlTeam2}</p>
           
           <CardActions>
-          <Grid container justify="center">
+             <Grid container justify="center">
           
           <table  className="batting1">
             <thead>
@@ -396,12 +369,9 @@ const Test = ( {match} ) =>{
 
             </tbody>
            </table>
-          </Grid>
+            </Grid>
           </CardActions>
- 
-        
-
-          </Card>
+     </Card>
 
          
            
