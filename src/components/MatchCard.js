@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-//import './Style.css';
+import './Matchcard.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import images from './image/images.jpeg';
 import {Link} from 'react-router-dom';
@@ -49,6 +49,7 @@ function MatchCard() {
               Click for Search Any Player 
             </button>
           </Link>
+          {/*
          
          {allmatches && allmatches.map((allmatch) =>(
         
@@ -82,12 +83,12 @@ function MatchCard() {
 
         <CardActions>
            <Grid container justify="center">
-               <h5>Toss Winner team : {allmatch.toss_winner_team}</h5>
+               <h5  >Toss Winner team : {allmatch.toss_winner_team}</h5>
           </Grid>
         </CardActions>
         <CardActions>
            <Grid container justify="center">
-              <h5>Match Winner team : {allmatch.winner_team}</h5>
+              <h5 >Match Winner team : {allmatch.winner_team}</h5>
            </Grid>
         </CardActions>
        
@@ -98,12 +99,13 @@ function MatchCard() {
               className="btn btn-primary"
               variant="outlined"
               color="secondary"
+              
             >
               Show Detail
             </button>
            </Link>
             <button
-              style={{ marginLeft: 5 }}
+              style={{ marginLeft: 5}}
               variant="outlined"
               color="primary"
               className="btn btn-danger"
@@ -114,8 +116,38 @@ function MatchCard() {
         </CardActions>
     </Card>
 ))}
-      
-  </div>  
+            */}
+
+
+            
+
+
+  <div class="container">
+    
+    <div className="row">
+    {allmatches && allmatches.map((allmatch) =>(
+      <div className="card" style={{background:'#cccccc'}}>
+        <div className="card-header">
+          <h4>{allmatch["team-1"]} <h4 className="versus">VS</h4> {allmatch["team-2"]}</h4>
+        </div>
+        <div className="card-body">
+          <p>
+          Toss Winner team : {allmatch.toss_winner_team}<br></br>
+          Match Winner team : {allmatch.winner_team}<br></br>
+          <p className="versus">Starting time {new Date(allmatch.dateTimeGMT).toLocaleString()}</p>
+          </p>
+          <Link to={`/MatchCard/${allmatch.unique_id}`}>
+            <button className="btn btn-primary"> Show Detail</button>
+          </Link>
+         
+        </div>
+      </div>
+      ))}
+      </div>
+    
+  </div> 
+
+  </div> 
       
     );
 }

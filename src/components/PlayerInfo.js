@@ -47,15 +47,15 @@ function PlayerInfo({match}) {
           width:'80%',
           height:'80%',
           boxShadow: '2px 18px 20px 20px #666666'
-         // color:"white"
-          //color: allmatch.matchStarted ? "white":"black"
+         
           
         }} >
         
         <CardContent>
           
           <Grid container justify="center" alignItems="center" spacing={4}>
-              <div className="container"><br></br>
+              <div  className="container"><br></br>
+               <div style={{overflowX:'auto'}}>
                 <img src={playerdata.imageURL} style={{height:230,width:200}}></img>
                 <h5 className="playerName">{playerdata.name}</h5>
                 <p>{playerdata.profile}</p><br></br>
@@ -69,10 +69,11 @@ function PlayerInfo({match}) {
                 <p><span style={{color:"blue","font-weight":"bold"}}>Playing role: </span><i><b>{playerdata.playingRole}.</b></i></p>
                 <p><span style={{color:"blue","font-weight":"bold"}}>Major Teams: </span><i><b>{playerdata.majorTeams}.</b></i></p>
                 </div><br></br><br></br>
-             
+             </div>
 
                <h2><b><u>Batting Statistics</u></b></h2>
-                <table responsive className="batting">
+               <div style={{overflowX:'auto',overflowY:'auto'}}>
+                <table responsive  className="batting">
                     
                 <thead>
               <tr>
@@ -180,11 +181,13 @@ function PlayerInfo({match}) {
                  <td>{batting.tests?.["100"]}</td>
              </tr>
             </tbody>
-                </table><br></br>
+            </table>
+            </div><br></br>
 
                 {/*bowlin statistics*/}
 
                 <h2><b><u>Bowling Statistics</u></b></h2>
+                <div style={{overflowX:'auto',overflowY:'auto'}}>
                 <table responsive className="batting">
                     
                 <thead>
@@ -289,7 +292,8 @@ function PlayerInfo({match}) {
                  <td>{bowling.tests?.["10"]}</td>
              </tr>
             </tbody>
-                </table><br></br>
+                </table>
+                </div><br></br>
            
                
          </div>

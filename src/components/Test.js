@@ -36,6 +36,9 @@ const Test = ( {match} ) =>{
         const [bowlTeam1,setbowlTeam1] = useState([]);
         const [bowlTeam2,setbowlTeam2] = useState([]);
 
+        //man of the match
+        const [mom,setmom] = useState([]);
+
     useEffect(()=>{
         MatchScore();
         MatchDetails();
@@ -71,7 +74,10 @@ const Test = ( {match} ) =>{
       setbowling2(matchdetails.data?.bowling[1]?.scores);
       setbowlTeam1(matchdetails.data?.bowling[0]?.title);
       setbowlTeam2(matchdetails.data?.bowling[1]?.title);
-      //console.log(matchdetails);
+      console.log(matchdetails);
+
+      // man of the match
+      setmom(matchdetails?.data?.["man-of-the-match"]);
     }
 
     return (
@@ -97,8 +103,11 @@ const Test = ( {match} ) =>{
         boxShadow: '2px 18px 20px 20px #666666'
        
        }}>
+         <div style={{overflowX:'auto'}}>
         <CardContent>
+          
             <Grid container justify="center" alignItems="center" spacing={4}> 
+            
               <Grid item>
                <Typography variant="h5">{scores["team-1"]}</Typography>
                </Grid>
@@ -126,11 +135,17 @@ const Test = ( {match} ) =>{
               <h5 style={{color: "black"}}>{scores.stat}</h5>
           </Grid>
         </CardActions>
+        <CardActions>
+           <Grid container justify="center">
+              <h5 style={{color: "black"}}>Man of the Match:{mom}</h5>
+          </Grid>
+        </CardActions>
        <CardActions>
            <Grid container justify="center">
                <p style={{color:"red"}}><b>-------------------------***************--------------------------</b></p>
            </Grid>
        </CardActions>
+     </div>
           <CardActions>
              <Grid container justify="center">
                  <h2><b><u>Squad</u></b></h2>
@@ -139,6 +154,7 @@ const Test = ( {match} ) =>{
           
         <CardActions>
           <Grid container justify="center">
+          <div style={{overflowX:'auto',overflowY:'auto'}}>
            <table className="batting1"> 
             <thead>
               <tr>
@@ -164,6 +180,7 @@ const Test = ( {match} ) =>{
                
                </tbody>
            </table>
+           </div>
           </Grid>
           </CardActions>
           
@@ -175,7 +192,7 @@ const Test = ( {match} ) =>{
               <p className="batTeam1">{batTeam1}</p>
           <CardActions>
               <Grid container justify="center">
-          
+              <div style={{overflowX:'auto',overflowY:'auto'}}>
                   <table className="batting1">
                      <thead>
                           <tr>
@@ -214,6 +231,7 @@ const Test = ( {match} ) =>{
 
             </tbody>
            </table>
+           </div>
           </Grid>
           </CardActions><br></br><br></br>
            
@@ -222,7 +240,7 @@ const Test = ( {match} ) =>{
           
           <CardActions>
           <Grid container justify="center">
-          
+          <div style={{overflowX:'auto',overflowY:'auto'}}>
           <table  className="batting1">
             <thead>
               <tr>
@@ -261,6 +279,7 @@ const Test = ( {match} ) =>{
 
             </tbody>
            </table>
+           </div>
           </Grid>
           </CardActions>
 
@@ -275,7 +294,7 @@ const Test = ( {match} ) =>{
           <p className="batTeam1">{bowlTeam1}</p>
           <CardActions>
           <Grid container justify="center">
-          
+          <div style={{overflowX:'auto',overflowY:'auto'}}>
           <table striped bordered hover variant="dark" className="batting1">
             <thead>
               <tr>
@@ -318,6 +337,7 @@ const Test = ( {match} ) =>{
 
             </tbody>
            </table>
+           </div>
           </Grid>
           </CardActions><br></br><br></br>
            
