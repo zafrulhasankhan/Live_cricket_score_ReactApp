@@ -22,11 +22,12 @@ function PlayerInfo({match}) {
     },[])
 
     const getplayerInfo =async()=>{
-    const response = await fetch(`https://cricapi.com/api/playerStats/?pid=${match.params.playerId}&apikey=nJDrD5PVkBVf8hkkuTWGBBaqOe52`);
+    const response = await fetch(`https://cricapi.com/api/playerStats/?pid=${match.params.playerId}&apikey=el3BqjZxc5MmxjbNyIYdPfnO9aT2`);
     const playerDetails = await response.json();
     setplayerdata(playerDetails);
     setbatting(playerDetails.data.batting);
     setbowling(playerDetails.data.bowling);
+    console.log(playerDetails);
     }
     return (
         <div>
@@ -56,7 +57,7 @@ function PlayerInfo({match}) {
           <Grid container justify="center" alignItems="center" spacing={4}>
               <div  className="container"><br></br>
                <div style={{overflowX:'auto'}}>
-                <img src={playerdata.imageURL} style={{height:230,width:200}}></img>
+                <img src={playerdata.imageURL} style={{height:230,width:200}} alt="Image not found"></img>
                 <h5 className="playerName">{playerdata.name}</h5>
                 <p>{playerdata.profile}</p><br></br>
                 <div style={{textAlign:"left"}}>

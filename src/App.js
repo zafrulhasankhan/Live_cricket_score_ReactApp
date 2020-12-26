@@ -9,20 +9,24 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom';
 import PlayerInfo from './components/PlayerInfo';
 import Search from './components/Search';
-
-
+import useStyles from './LogoStyle';
+import ProjectLogo from './components/image/ProjectLogo.png';
 
 
 
 
 
 function App() {
+  const classes =  useStyles();
       return(
       
       
       
 <div className="App">
-<p className="Apptitle"><b>Welcome To Nasim's Live Cricket App</b></p><br></br>
+{/*<p className="Apptitle"><b>Welcome To Nasim's Live Cricket App</b></p><br></br>*/}
+      <div  className={classes.logoContainer}>
+        <img src={ProjectLogo}  className={classes.alanLogo} alt="owner photo"/>
+      </div>
       
 <Router>
 

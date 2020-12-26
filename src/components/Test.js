@@ -49,17 +49,15 @@ const Test = ( {match} ) =>{
 
     const MatchScore= async()=>{
         
-        const response = await fetch(`https://cricapi.com/api/cricketScore/?unique_id=${match.params.id}&apikey=nJDrD5PVkBVf8hkkuTWGBBaqOe52`);
+        const response = await fetch(`https://cricapi.com/api/cricketScore/?unique_id=${match.params.id}&apikey=el3BqjZxc5MmxjbNyIYdPfnO9aT2`);
         const matchSummary =  await response.json();
         setscores(matchSummary);
-        
-        //setTeam2(matchdetails.data?.team[1]?.players);
-        //safety(()=>matchdetails.data.team.players[0]);
-        //let property = safety(()=>this.matchdetails.data.team.players[0])
+        console.log(matchSummary);
+       
     }
 
     const MatchDetails = async() =>{
-      const response = await fetch(`https://cricapi.com/api/fantasySummary/?unique_id=${match.params.id}&apikey=nJDrD5PVkBVf8hkkuTWGBBaqOe52`);
+      const response = await fetch(`https://cricapi.com/api/fantasySummary/?unique_id=${match.params.id}&apikey=el3BqjZxc5MmxjbNyIYdPfnO9aT2`);
       const matchdetails = await response.json();
       setsquad(matchdetails.data?.team[0]?.players);
       setTeam2(matchdetails.data?.team[1]?.players);
@@ -78,6 +76,7 @@ const Test = ( {match} ) =>{
 
       // man of the match
       setmom(matchdetails?.data?.["man-of-the-match"]);
+      
     }
 
     return (
@@ -346,7 +345,7 @@ const Test = ( {match} ) =>{
           
           <CardActions>
              <Grid container justify="center">
-          
+        <div style={{overflowX:'auto',overflowY:'auto'}}>
           <table  className="batting1">
             <thead>
               <tr>
@@ -389,6 +388,7 @@ const Test = ( {match} ) =>{
 
             </tbody>
            </table>
+           </div>
             </Grid>
           </CardActions>
      </Card>

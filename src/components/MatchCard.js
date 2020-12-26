@@ -28,7 +28,7 @@ function MatchCard() {
 //api2 goole_pc= el3BqjZxc5MmxjbNyIYdPfnO9aT2
   
   const getmatchInfo =async()=>{
-    const response = await fetch("https://cricapi.com/api/matches/nJDrD5PVkBVf8hkkuTWGBBaqOe52");
+    const response = await fetch("https://cricapi.com/api/matches/el3BqjZxc5MmxjbNyIYdPfnO9aT2");
    //const response = await fetch("https://cricapi.com/api/cricketScore/?unique_id=1216524&apikey=el3BqjZxc5MmxjbNyIYdPfnO9aT2");
    //const response = await fetch("https://cricapi.com/api/fantasySummary/?unique_id=1216524&apikey=el3BqjZxc5MmxjbNyIYdPfnO9aT2");
    const matchlist = await response.json();
@@ -126,9 +126,11 @@ function MatchCard() {
     
     <div className="row">
     {allmatches && allmatches.map((allmatch) =>(
-      <div className="card" style={{background:'#cccccc'}}>
+      <div className="card" style={{background:'rgb(214, 214, 218)'}}>
         <div className="card-header">
+         
           <h4>{allmatch["team-1"]} <h4 className="versus">VS</h4> {allmatch["team-2"]}</h4>
+          <p style={{fontSize:'13px'}}>{allmatch?.type} Match</p>
         </div>
         <div className="card-body">
           <p>

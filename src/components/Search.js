@@ -38,7 +38,7 @@ function Search() {
   },[query])
 
   const getplayerlist =async()=>{
-    const response = await fetch(`https://cricapi.com/api/playerFinder/?name=${query}&apikey=nJDrD5PVkBVf8hkkuTWGBBaqOe52`);
+    const response = await fetch(`https://cricapi.com/api/playerFinder/?name=${query}&apikey=el3BqjZxc5MmxjbNyIYdPfnO9aT2`);
     const playerlist = await response.json();
     setplayerfind(playerlist.data);
     console.log(playerlist);
@@ -62,15 +62,17 @@ function Search() {
       <h2><b><u>All Results</u></b></h2>
       </Grid>  
       </CardActions>
-
-
-     {(() => {
+      
+        
+     {playerfind.length?(
+        <div> 
+             {(() => {
                 let team1= [];
                  for(let i=0; i< playerfind?.length;i++){
                     team1.push( 
                    <CardActions>
                      <Grid container justify="center">
-                  
+                       
                     <div className="playercard">
                         <h4><br></br>
                         <Link to={`/MatchCard/${matchId}/${playerfind[i]?.pid}`}>
@@ -85,9 +87,21 @@ function Search() {
                     
                  }
                  return team1;
-            })()}
-               
-    <br></br>
+            })()} 
+       </div>
+
+     ):(
+      <CardActions>
+      <Grid container justify="center">
+      <div className="playercard">
+         <h5>Search again...</h5>
+      </div>
+      </Grid>
+      </CardActions>
+     )}
+     
+          
+        <br></br>
        </div>
 
     );
