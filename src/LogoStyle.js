@@ -19,7 +19,7 @@ export default makeStyles((theme) => ({
       alanLogo: {
         height: '18vmin',
         //width:'35vmin',
-        borderRadius: '62%',
+        borderRadius: '25%',
         padding: '0 1%',
         margin: '.1% 0',
         '&:hover':{

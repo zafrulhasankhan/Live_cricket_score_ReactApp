@@ -90,7 +90,8 @@ const Test = ( {match} ) =>{
 
           
        <Card style={{
-        background: "rgba(216, 208, 208, 0.781)",
+        background: "black",
+        color:'white',
         textAlign:"center",
         marginTop: 15,
           marginLeft:'10%',
@@ -101,7 +102,7 @@ const Test = ( {match} ) =>{
           height:'80%',
         boxShadow: '2px 18px 20px 20px #666666'
        
-       }}>
+       }} key={mom?.name}>
          <div style={{overflowX:'auto'}}>
         <CardContent>
           
@@ -131,12 +132,12 @@ const Test = ( {match} ) =>{
         </CardActions>
         <CardActions>
            <Grid container justify="center">
-              <h5 style={{color: "black"}}>{scores.stat}</h5>
+              <h5 style={{color: "white"}}>{scores.stat}</h5>
           </Grid>
         </CardActions>
         <CardActions>
            <Grid container justify="center">
-              <h5 style={{color: "black"}}>Man of the Match:{mom}</h5>
+              <h5 style={{color: "white"}}>Man of the Match: <Link to={`/MatchCard/${match.params.id}/${mom?.pid}`}>{mom?.name}</Link></h5>
           </Grid>
         </CardActions>
        <CardActions>
@@ -212,9 +213,9 @@ const Test = ( {match} ) =>{
                  for(let i=0; i< batting1?.length;i++){
                     name.push( 
                     <tr>
-                    <Link to={`/MatchCard/${match.params.id}/${batting1[i]?.pid}`}>
-                    <td style={{"font-weight":"bold"}}>{batting1[i]?.batsman}</td>
-                   </Link>
+                    
+                    <td style={{"font-weight":"bold"}}><Link to={`/MatchCard/${match.params.id}/${batting1[i]?.pid}`}>{batting1[i]?.batsman}</Link></td>
+                   
                     <td>{batting1[i]?.R}</td>
                     <td>{batting1[i]?.B}</td>
                     <td>{batting1[i]?.["6s"]}</td>
@@ -260,9 +261,9 @@ const Test = ( {match} ) =>{
                  for(let i=0; i< batting2?.length;i++){
                     name.push( 
                     <tr>
-                    <Link to={`/MatchCard/${match.params.id}/${batting2[i]?.pid}`}>
-                    <td style={{"font-weight":"bold"}}>{batting2[i]?.batsman}  </td>
-                    </Link>
+                    
+                    <td style={{"font-weight":"bold"}}><Link to={`/MatchCard/${match.params.id}/${batting2[i]?.pid}`}>{batting2[i]?.batsman} </Link> </td>
+                    
                     <td>{batting2[i]?.R}</td>
                     <td>{batting2[i]?.B}</td>
                     <td>{batting2[i]?.["6s"]}</td>
@@ -316,9 +317,9 @@ const Test = ( {match} ) =>{
                  for(let i=0; i< bowling1?.length;i++){
                     name.push( 
                     <tr>
-                    <Link to={`/MatchCard/${match.params.id}/${bowling1[i]?.pid}`}>
-                    <td style={{"font-weight":"bold"}}>{bowling1[i]?.bowler}</td>
-                    </Link>
+                    
+                    <td style={{"font-weight":"bold"}}><Link to={`/MatchCard/${match.params.id}/${bowling1[i]?.pid}`}>{bowling1[i]?.bowler} </Link></td>
+                    
                     <td>{bowling1[i]?.O}</td>
                     <td>{bowling1[i]?.M}</td>
                     <td>{bowling1[i]?.R}</td>
@@ -368,9 +369,9 @@ const Test = ( {match} ) =>{
                  for(let i=0; i< bowling2?.length;i++){
                     name.push( 
                     <tr>
-                    <Link to={`/MatchCard/${match.params.id}/${bowling2[i]?.pid}`}>
-                    <td style={{"font-weight":"bold"}}>{bowling2[i]?.bowler}</td>
-                    </Link>
+                    
+                    <td style={{"font-weight":"bold"}}><Link to={`/MatchCard/${match.params.id}/${bowling2[i]?.pid}`}>{bowling2[i]?.bowler}</Link></td>
+                    
                     <td>{bowling2[i]?.O}</td>
                     <td>{bowling2[i]?.M}</td>
                     <td>{bowling2[i]?.R}</td>

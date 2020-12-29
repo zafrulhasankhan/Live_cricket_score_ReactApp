@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch , Route } from 'react-router-dom';
 import Test from './components/Test';
 import images from './components/image/images.jpeg';
 import './components/Style.css';
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom';
 import PlayerInfo from './components/PlayerInfo';
 import Search from './components/Search';
@@ -23,7 +23,7 @@ function App() {
       
       
 <div className="App">
-{/*<p className="Apptitle"><b>Welcome To Nasim's Live Cricket App</b></p><br></br>*/}
+   
       <div  className={classes.logoContainer}>
         <img src={ProjectLogo}  className={classes.alanLogo} alt="owner photo"/>
       </div>

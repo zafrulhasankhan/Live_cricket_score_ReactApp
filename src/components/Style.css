@@ -22,7 +22,7 @@ table {
   }
   
   th, td {
-    text-align: left;
+    text-align: center;
     padding: 8px;
   }
   
@@ -163,7 +163,7 @@ th,td{
 .batting1 {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 70%;
+    width: 100%;
   }
   
   .batting1 td, .batting1 th {
@@ -171,9 +171,9 @@ th,td{
     padding: 8px;
   }
   
-  .batting1 tr:nth-child(even){background-color: #f2f2f2;}
+  .batting1 tr:nth-child(even){background-color: rgb(83, 80, 80);color: white; border: 1px solid black;;}
   
-  .batting1 tr:hover {background-color: #ddd;}
+  .batting1 tr:hover {background-color:  white; color: black;}
   
   .batting1 th {
     padding-top: 12px;
@@ -188,6 +188,7 @@ th,td{
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    flex-flow: wrap;
   }
   
   .batting td, .batting th {
@@ -195,9 +196,10 @@ th,td{
     padding: 8px;
   }
   
-  .batting tr:nth-child(even){background-color: #f2f2f2;}
   
-  .batting tr:hover {background-color: #ddd;}
+  .batting tr:nth-child(even){background-color:rgb(117, 117, 117);color: white; border: 1px solid black;}
+  
+  .batting tr:hover {background-color: white; color: black;}
   
   .batting th {
     padding-top: 12px;
@@ -230,19 +232,49 @@ th,td{
     height: 39px;
 }
 .input-box{
+    border-radius: 7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
     border: 1px solid;
-    background: rgb(122, 116, 111);
+    background: black;
     padding: 10px;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 2px 18px 20px 20px #666666;
 }
+.input-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  }
+  @media screen and (max-width: 1000px) {
+    .card,.input-box ,.search-bar {
+      width: 40%;
+    }
+  }
+  
+  @media screen and (max-width: 620px) {
+    .container,.input-box, .search-bar {
+      width: 100%;
+    }
+}
+
 
 .playercard{
     text-align: center;
     justify-content:center;
     border: 1px solid black;
     width: 400px;
-    background: rgb(238, 237, 234);
-    box-shadow: 5px 10px 18px #888888;
+    background: black;
+    color: white;
+    box-shadow: 2px 18px 20px 20px #666666;
+}
+.playercard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
 
 .btn-outline-success, .editable-container.editable-inline .editableform .control-group .editable-buttons .editable-submit {

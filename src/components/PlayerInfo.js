@@ -39,7 +39,7 @@ function PlayerInfo({match}) {
             </Link><br></br><br></br>
             <Card  style={{
          // background: allmatch.matchStarted ? " black" : "#cccccc",
-          background:"#cccccc",
+          background:'black',
           marginTop: 15,
           marginLeft:'10%',
           justifyContent:'center',
@@ -47,8 +47,9 @@ function PlayerInfo({match}) {
           flexDirection:'column',
           width:'80%',
           height:'80%',
-          boxShadow: '2px 18px 20px 20px #666666'
-         
+          boxShadow: '2px 18px 20px 20px #666666',
+          color:'white'
+      
           
         }} >
         

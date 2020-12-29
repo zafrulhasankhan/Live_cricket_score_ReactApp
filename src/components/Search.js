@@ -47,16 +47,20 @@ function Search() {
     
     return (
         <div className="App">
+          
         <CardActions>
-        <Grid container justify="center">
-         <div className="input-box">
-        <form className="search-form" onSubmit={getsearch}><br></br>
-        <input className="search-bar" placeholder="Search Your Favourite Player" type="text" value={search} onChange={updateSearch}></input><br></br><br></br>
-        <button className="btn btn-primary" type="submit" >Search</button>
-        </form>
-        </div>
-      </Grid>
+          <Grid container justify="center">
+            <div className="input-box">
+           <form className="search-form" onSubmit={getsearch}>
+            <p style={{color:'white',fontSize:'17px'}}><b><u>Nasim's Cricket  App</u></b></p>
+            <input className="search-bar" placeholder="Search Your Favourite Player" type="text" value={search} onChange={updateSearch}></input><br></br><br></br>
+             <button className="btn btn-primary" type="submit" >Search</button>
+          </form>
+         </div>
+        </Grid>
       </CardActions>
+          
+
       <CardActions>
       <Grid container justify="center">
       <h2><b><u>All Results</u></b></h2>
