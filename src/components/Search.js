@@ -3,9 +3,7 @@ import {Link} from 'react-router-dom';
 import './Style.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {
-    Button,
-    Card,
-    CardActions,
+   CardActions,
     CardContent,
     Grid,
     Typography

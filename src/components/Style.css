@@ -1,21 +1,19 @@
+
 div.App {
-    font-size: 15px;
-  }
-  
-  @media screen and (min-width: 900px) {
-    div.App {
-      font-size: 20px;
-    }
-  }
-  
-  @media screen and (max-width: 240px) {
-    div.App {
-      font-size: 10px;
-    }
-  }
+  font-size: 15px;
+}
 
+@media screen and (min-width: 900px) {
+  div.App {
+    font-size: 20px;
+  }
+}
 
-
+@media screen and (max-width: 240px) {
+  div.App {
+    font-size: 10px;
+  }
+}
 table {
     border-collapse: collapse;
     width: 100%;
@@ -231,50 +229,51 @@ th,td{
     border: 2px solid black;
     height: 39px;
 }
-.input-box{
-    border-radius: 7%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-flow: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 
-    border: 1px solid;
-    background: black;
-    padding: 10px;
-    box-shadow: 2px 18px 20px 20px #666666;
+.input-box{
+  border-radius: 7%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border: 1px solid;
+  background: black;
+  padding: 10px;
+  box-shadow: 2px 18px 20px 20px #666666;
 }
 .input-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 1000px) {
+  .input-box ,.search-bar {
+    width: 40%;
   }
-  @media screen and (max-width: 1000px) {
-    .card,.input-box ,.search-bar {
-      width: 40%;
-    }
+}
+
+@media screen and (max-width: 620px) {
+  .input-box, .search-bar {
+    width: 100%;
   }
-  
-  @media screen and (max-width: 620px) {
-    .container,.input-box, .search-bar {
-      width: 100%;
-    }
 }
 
 
 .playercard{
-    text-align: center;
-    justify-content:center;
-    border: 1px solid black;
-    width: 400px;
-    background: black;
-    color: white;
-    box-shadow: 2px 18px 20px 20px #666666;
+  text-align: center;
+  justify-content:center;
+  border: 1px solid black;
+  width: 400px;
+  background: black;
+  color: white;
+  box-shadow: 2px 18px 20px 20px #666666;
 }
 .playercard:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+transform: scale(1.05);
+box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
 
 .btn-outline-success, .editable-container.editable-inline .editableform .control-group .editable-buttons .editable-submit {
