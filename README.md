@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Nasim's Cricket APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ [Live Site for this Project](https://nasim-cricket-app.netlify.app).
 
 ## Available Scripts
 
