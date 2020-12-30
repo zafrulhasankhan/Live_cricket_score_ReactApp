@@ -218,10 +218,10 @@ th,td{
   }
 
   .search-bar{
-      
+      font-size: medium;
       border-radius: 10px;
       height: 42px;
-      width: 270px;
+      width: 250px;
       padding: 10px;
     
   }
@@ -266,7 +266,7 @@ th,td{
   text-align: center;
   justify-content:center;
   border: 1px solid black;
-  width: 400px;
+  width: 285px;
   background: black;
   color: white;
   box-shadow: 2px 18px 20px 20px #666666;

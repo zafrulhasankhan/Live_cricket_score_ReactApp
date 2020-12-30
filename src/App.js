@@ -35,6 +35,10 @@ return(
              </Switch>
           </Router>
 
+           
+      <p className="creater"  style={{textAlign:"center"}}><b>Created by</b><a href="https://web.facebook.com/zafrulhasan.nasim" target="_blank"><b>Zafrul Hasan Nasim</b> </a></p>
+    
+
 </div>
 
 
